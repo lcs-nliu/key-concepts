@@ -15,9 +15,9 @@ let canvas = Canvas(width: 200, height: 360)
 // Draw lines with steadily increasing thickness
 for position in stride(from: 0, through: 100, by: 10) {
     
-    // What is the current value of position?
-    position
-    
+//    // What is the current value of position?
+//    position
+//
     // Set thickness of lines
     let thickness = position / 10
     
@@ -27,13 +27,13 @@ for position in stride(from: 0, through: 100, by: 10) {
 
 // Draw lines with steadily decreasing thickness
 for position in stride(from: 110, through: 200, by: 10) {
-    
+
     // What is the current value of position?
     position
 
     // Set thickness of lines
     let thickness = (200 - position) / 10
-    
+
     // Draw each line
     canvas.drawLine(from: Point(x: position, y: 0), to: Point(x: position, y: 360), lineWidth: thickness)
 }

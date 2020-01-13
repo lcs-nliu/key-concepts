@@ -26,24 +26,41 @@ import PlaygroundSupport
 
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
-
-// COLORS
-let grey = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
-let lightBlue = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
-let lightRed = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
-
-// HINT: Remember that all shapes have a fill and a border.
-//       You can turn off the fill or border if desired.
-
-// No border, has a fill
+// draw grey rectangle that fills background
+canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
 canvas.drawShapesWithBorders = false
-canvas.drawShapesWithFill = true
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 50, height: 75)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
 
-// Has a border, no fill
-canvas.drawShapesWithBorders = true
+// draw big red circle
+canvas.fillColor = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
+canvas.drawEllipse(at: Point(x:200, y:200), width: 350, height: 350)
+
+// draw grey circle that is inside the red circle
+canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
+canvas.drawEllipse(at: Point(x:200, y:200), width: 175, height: 175)
+
+canvas.borderColor = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
 canvas.drawShapesWithFill = false
-canvas.drawEllipse(at: Point(x: 200, y: 100), width: 50, height: 75)
+canvas.drawShapesWithBorders = true
+canvas.drawEllipse(at: Point(x:350, y:200), width: 275, height: 275, borderWidth: 100)
+
+//// COLORS
+//let grey = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
+//let lightBlue = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
+//let lightRed = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
+//
+//// HINT: Remember that all shapes have a fill and a border.
+////       You can turn off the fill or border if desired.
+//
+//// No border, has a fill
+//canvas.drawShapesWithBorders = false
+//canvas.drawShapesWithFill = true
+//canvas.drawEllipse(at: Point(x: 100, y: 100), width: 50, height: 75)
+//
+//// Has a border, no fill
+//canvas.drawShapesWithBorders = true
+//canvas.drawShapesWithFill = false
+//canvas.drawEllipse(at: Point(x: 200, y: 100), width: 50, height: 75)
 
 
 /*:
