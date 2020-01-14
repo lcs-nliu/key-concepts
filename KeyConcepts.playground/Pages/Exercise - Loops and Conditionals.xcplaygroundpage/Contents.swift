@@ -29,11 +29,34 @@ import PlaygroundSupport
 
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
+// turn off borders
+canvas.drawShapesWithBorders = false
+// draw the orange background
+canvas.fillColor = Color(hue: 12, saturation: 78, brightness: 92, alpha: 100)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-// COLOR CONSTANTS
-let deepOrange = Color(hue: 12, saturation: 78, brightness: 92, alpha: 100)
-let lightBlue = Color(hue: 195, saturation: 63, brightness: 92, alpha: 100)
-let neonGreen = Color(hue: 107, saturation: 61, brightness: 93, alpha: 100)
+// draw the blue stripes
+canvas.fillColor = Color(hue: 195, saturation: 63, brightness: 92, alpha: 100)
+for position in stride (from: 0, through: 400, by: 100) {
+    canvas.drawRectangle(at: Point(x: position, y: 0), width: 50, height: 350)
+}
+
+// draw the green stripes
+canvas.fillColor = Color(hue: 107, saturation: 61, brightness: 93, alpha: 100)
+for position in stride (from: 50, through: 400, by: 100) {
+canvas.drawRectangle(at: Point(x: position, y: 50), width: 50, height: 350)
+}
+
+
+// Add the sloan text
+canvas.textColor = Color(hue: 0, saturation: 0, brightness: 100, alpha: 100)
+canvas.drawText(message: "sloan", at: Point(x:125, y:400), size: 100)
+
+
+//// COLOR CONSTANTS
+//let deepOrange = Color(hue: 12, saturation: 78, brightness: 92, alpha: 100)
+//let lightBlue = Color(hue: 195, saturation: 63, brightness: 92, alpha: 100)
+//let neonGreen = Color(hue: 107, saturation: 61, brightness: 93, alpha: 100)
 
 // HINT: Remember that all shapes have a fill and a border.
 //       You can turn off the fill or border if desired.
