@@ -50,7 +50,7 @@ canvas.drawRectangle(at: Point(x: position, y: 50), width: 50, height: 350)
 
 // Add the sloan text
 canvas.textColor = Color(hue: 0, saturation: 0, brightness: 100, alpha: 100)
-canvas.drawText(message: "sloan", at: Point(x:125, y:400), size: 100)
+canvas.drawText(message: "sloan", at: Point(x:150, y:400), size: 95)
 
 
 //// COLOR CONSTANTS

@@ -45,8 +45,9 @@ canvas.drawShapesWithBorders = true
 canvas.drawEllipse(at: Point(x:350, y:200), width: 275, height: 275, borderWidth: 100)
 
 canvas.textColor = Color (hue: 0, saturation: 0, brightness: 0, alpha: 100)
-canvas.drawText(message: "the jesus", at: Point(x: 15, y:445), size: 40, kerning: 0.0)
-canvas.drawText(message: "and mary chain", at: Point(x: 15, y:400), size: 40, kerning: 0.0)
+canvas.drawText(message: "the jesus" + "\n" + "and mary chain", at: Point(x: 15, y:380), size: 40, kerning: 0.0)
+
+
 //// COLORS
 //let grey = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
 //let lightBlue = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)

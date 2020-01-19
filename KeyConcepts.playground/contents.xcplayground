@@ -10,5 +10,7 @@
         <page name='Iteration with For-In Loops'/>
         <page name='Conditional Statements'/>
         <page name='Variables and Operators'/>
+        <page name='Exercise - Loops and Conditionals'/>
+        <page name='Swissted Poster'/>
     </pages>
 </playground>
